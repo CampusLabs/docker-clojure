@@ -1,9 +1,9 @@
-FROM quay.io/orgsync/java:1.8
-MAINTAINER Joshua Griffith <joshua@orgsync.com>
+FROM quay.io/orgsync/java:1.9.0
+MAINTAINER Matt Tarantino <mtarantino@campuslabs.com>
 
 ENV LEIN_ROOT true
 
-RUN wget -q -O /usr/bin/lein -- https://raw.githubusercontent.com/technomancy/leiningen/2.5.3/bin/lein \
+RUN wget -q -O /usr/bin/lein -- https://raw.githubusercontent.com/technomancy/leiningen/2.8.1/bin/lein \
     && chmod +x /usr/bin/lein \
     && lein > /dev/null 2>&1
 
